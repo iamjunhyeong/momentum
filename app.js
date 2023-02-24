@@ -1,26 +1,15 @@
-const title = document.querySelector(".hello h1");
-console.dir(title)
-title.innerText = "Click ME!"
+const title = document.querySelector("div.hello h1");
+console.dir(title);
+title.innerText = "Click ME!";
 
 function handleTitleClick(){
-    console.log("title was clicked!");
-    title.style.color = "blue"
-}
-function handleMouseEnter(){
-    title.innerText = "Mouse is here!"
-}
-function handleMouseLeave(){
-    title.innerText = "Mouse is gone!"
-}
-function handleWindowResize(){
-    document.body.style.backgroundColor = "tomato";
-}
-function handleWindowCopy(){
-        alert("copier");
+    const currentColoer = title.style.color;
+    let newColoer;
+    if (currentColoer === "blue"){
+        newColoer = "tomato";
+    }else{
+        newColoer = "blue";
+    }
+    title.style.color = newColoer;
 }
 title.addEventListener("click", handleTitleClick);
-title.addEventListener("mouseenter", handleMouseEnter);
-title.addEventListener("mouseleave", handleMouseLeave);
-
-window.addEventListener("resize", handleWindowResize);
-window.addEventListener("copy", handleWindowCopy);
