@@ -9,14 +9,16 @@
 </head>
 <body>
     <!-- input이 form 안에 있어야 유효성 검사가된다 -->
-    <form id="login-form">    
+    <form id="login-form" class="hidden">    
         <input 
         required
         maxlength="15"
         type = "text"
         placeholder="What is your name?" />
-        <button>Log In</button>
+        <input type="submit" value="Log In">
     </form>
+    <!-- form 밖에 빼줘야함 !! -->
+    <h1 id="greeting" class="hidden"></h1>
     <script src="app.js"></script>
 </body>
 </html>
