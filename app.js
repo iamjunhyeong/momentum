@@ -1,15 +1,9 @@
-const title = document.querySelector("div.hello h1");
-console.dir(title);
-title.innerText = "Click ME!";
+const loginform = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
 
-function handleTitleClick(){
-    const currentColoer = title.style.color;
-    let newColoer;
-    if (currentColoer === "blue"){
-        newColoer = "tomato";
-    }else{
-        newColoer = "blue";
-    }
-    title.style.color = newColoer;
+function btnclick(event) {
+    event.preventDefault();
+    const username = loginInput.value;
+    console.log(username);
 }
-title.addEventListener("click", handleTitleClick);
+loginform.addEventListener("submit", btnclick)
